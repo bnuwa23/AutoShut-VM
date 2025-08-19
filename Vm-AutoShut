@@ -1,0 +1,98 @@
+# AutoShut-VM 🚀
+
+**Project Type**: Azure Infrastructure Deployment (via Azure Portal)  
+**Cert Goal**: AZ-104 — Azure Administrator Associate  
+**Tools Used**: Azure Portal, Monitoring, Auto-shutdown, SSH
+
+---
+
+## 🧾 Project Overview
+
+This project demonstrates how to deploy a secure, cost-optimized Ubuntu VM on Azure using only the **Azure Portal**. Key features include:
+
+- Ubuntu 24.04 LTS VM
+- Auto-shutdown enabled to save costs
+- Secure SSH access (no passwords)
+- Boot diagnostics for troubleshooting
+- Trusted Launch security
+- Tags for resource tracking
+
+---
+
+## 🔧 Deployment Steps (via Azure Portal)
+
+1. Go to [Azure Portal](https://portal.azure.com)
+2. Navigate to **"Virtual Machines" → Create → Virtual Machine**
+3. Fill in:
+   - Resource Group: `Azure_Project_1`
+   - VM Name: `AutoShut-VM`
+   - Region: `Canada Central`
+   - Image: `Ubuntu 24.04 LTS`
+   - Size: `Standard_B1s`
+   - Authentication: SSH (public key)
+4. Enable **Boot Diagnostics** and **Trusted Launch**
+5. Set **Tags**:  
+   - `Project: AutoShut-VM`  
+   - `Environment: Test`
+
+---
+
+## 💡 Auto-Shutdown Setup
+
+1. Go to **Virtual Machine > Operations > Auto-shutdown**
+2. Set shutdown time (e.g. 7:00 PM EST)
+3. Add notification email (optional)
+4. Save the settings
+
+---
+
+## 🛡️ Security Settings
+
+- **SSH key authentication only**
+- **No password login**
+- **Trusted Launch** with Secure Boot + vTPM enabled
+
+---
+
+## 📊 Monitoring Setup (Manual)
+
+> *(Optional — add if you did this)*
+
+1. Open the VM > **Monitoring > Alerts**
+2. Create a new alert rule for:
+   - **Metric**: CPU percentage
+   - **Condition**: Greater than 70%
+   - **Action**: Email notification
+
+---
+
+## 🖼️ Screenshots
+
+| Portal VM Settings | Auto-shutdown | Tags |
+|--------------------|----------------|------|
+| ![VM](images/vm.png) | ![Shutdown](images/shutdown.png) | ![Tags](images/tags.png) |
+
+---
+
+## 📌 Project Status
+
+- ✅ VM deployed via portal
+- ✅ Auto-shutdown enabled
+- ✅ Secure configuration with Trusted Launch
+- ❌ No Azure Monitor alert yet *(planned)*
+
+---
+
+## 🧠 Lessons Learned
+
+- Deploying via portal helps understand VM creation step-by-step
+- Secure defaults (SSH only, trusted launch) are critical
+- Auto-shutdown is easy to miss — now it’s part of my standard config
+
+---
+
+## 👤 Author
+
+Brian Nuwagaba 
+AZ-104 Certified (in progress)  
+[LinkedIn](https://linkedin.com/in/your-profile) • [GitHub](https://github.com/yourusername)
