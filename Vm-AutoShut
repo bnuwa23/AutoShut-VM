@@ -79,7 +79,7 @@ This project demonstrates how to deploy a secure, cost-optimized Ubuntu VM on Az
 - ✅ VM deployed via portal
 - ✅ Auto-shutdown enabled
 - ✅ Secure configuration with Trusted Launch
-- ❌ No Azure Monitor alert yet *(planned)*
+- ✅ Azure Monitor alert
 
 ---
 
